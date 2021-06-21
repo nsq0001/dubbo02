@@ -9,7 +9,7 @@
         <version>2.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.mashibing.mybatis</groupId>
+    <groupId>com.nisq.mybatis</groupId>
     <artifactId>dubbo02</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -126,5 +126,9 @@
             <version>3.12.0</version>
         </dependency>
         <!--swagger-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
     </dependencies>
 </project>
