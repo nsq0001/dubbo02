@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mashibing.mybatis.mapper.PermissionMapper">
-  <resultMap id="BaseResultMap" type="com.mashibing.mybatis.entity.Permission">
+<mapper namespace="com.nisq.mybatis.mapper.PermissionMapper">
+  <resultMap id="BaseResultMap" type="com.nisq.mybatis.entity.Permission">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="uri" jdbcType="VARCHAR" property="uri" />
     <result column="name" jdbcType="VARCHAR" property="name" />
@@ -81,7 +81,7 @@
   <sql id="Base_Column_List">
     id, uri, `name`, `c`, r, u, d
   </sql>
-  <select id="selectByExample" parameterType="com.mashibing.mybatis.mapper.PermissionExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.nisq.mybatis.mapper.PermissionExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -113,19 +113,19 @@
     delete from permission
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.mashibing.mybatis.mapper.PermissionExample">
+  <delete id="deleteByExample" parameterType="com.nisq.mybatis.mapper.PermissionExample">
     delete from permission
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.mashibing.mybatis.entity.Permission" useGeneratedKeys="true">
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.nisq.mybatis.entity.Permission" useGeneratedKeys="true">
     insert into permission (uri, `name`, `c`, 
       r, u, d)
     values (#{uri,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{c,jdbcType=TINYINT}, 
       #{r,jdbcType=TINYINT}, #{u,jdbcType=TINYINT}, #{d,jdbcType=TINYINT})
   </insert>
-  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.mashibing.mybatis.entity.Permission" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.nisq.mybatis.entity.Permission" useGeneratedKeys="true">
     insert into permission
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="uri != null">
@@ -168,7 +168,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.mashibing.mybatis.mapper.PermissionExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.nisq.mybatis.mapper.PermissionExample" resultType="java.lang.Long">
     select count(*) from permission
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -216,7 +216,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mashibing.mybatis.entity.Permission">
+  <update id="updateByPrimaryKeySelective" parameterType="com.nisq.mybatis.entity.Permission">
     update permission
     <set>
       <if test="uri != null">
@@ -240,7 +240,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.mashibing.mybatis.entity.Permission">
+  <update id="updateByPrimaryKey" parameterType="com.nisq.mybatis.entity.Permission">
     update permission
     set uri = #{uri,jdbcType=VARCHAR},
       `name` = #{name,jdbcType=VARCHAR},

@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.mashibing.mybatis.mapper")
+@MapperScan("com.nisq.mybatis.mapper")
 public class DubboProviderApplication {
 
 	public static void main(String[] args) {
